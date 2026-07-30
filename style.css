@@ -222,7 +222,7 @@ body {
 .schedule-grid {
     display: grid;
     grid-template-columns: 2.5fr 2fr 1.2fr;
-    align-items: center;
+    align-items: stretch;
 }
 
 .grid-header {
