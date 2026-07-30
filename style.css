@@ -432,3 +432,40 @@ body {
     opacity: 0.7;
     cursor: not-allowed;
 }
+
+.card {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Current Course Indicator */
+.card.current {
+    border: 2px solid var(--accent-purple);
+}
+
+.current-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: #f0eeff; 
+    color: var(--accent-purple);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 10;
+}
+
+
+.star-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.card.current .image-wrapper {
+    margin-top: 1.5rem;
+}
+
