@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Classroom</title>
+    <link rel="icon" type="image/x-icon" href="https://flaticon.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="bird.png" alt="Nest Logo" class="logo-icon">
+            Nest
+        </div>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="classroom.html" class="active">Classroom</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="classroom-grid">
+            
+            <!-- Main Content Area Column Section -->
+            <div class="video-main-wrapper">
+                <div class="video-placeholder">
+                     <video src="cssgrid.mp4" class="video" controls> Your browser does not support the video tag.</video>
+                    </video>
+                </div>
+                <div class="video-details">
+                    <h2>Lesson 4: Mastering CSS Grid Track Structures</h2>
+                    <p>In this comprehensive streaming guide module, you learn exactly how fractional grid rows behave when processing dynamic parent wrapper view constraints.</p>
+                </div>
+            </div>
+
+            <!-- Playlist Sidepanel Column Section -->
+            <div class="syllabus-sidebar-card">
+                <h3>Course Syllabus</h3>
+                <ul class="custom-list">
+                    <li class="completed">
+                        <span class="icon">✔</span> 1. Introduction to Web Semantics
+                    </li>
+                    <li class="completed">
+                        <span class="icon">✔</span> 2. Selectors and Specificity
+                    </li>
+                    <li class="active">
+                        <span class="icon">➔</span> 4. Advanced Track Architectures
+                    </li>
+                    <li class="locked">
+                        <span class="icon">🔒</span> 5. Deploying App Pipelines
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

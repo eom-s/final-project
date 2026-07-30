@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Online Learning Platform-->
+    <title>Nest Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="https://flaticon.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="bird.png" alt="Nest Logo" class="logo-icon">
+            Nest
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="classroom.html">Classroom</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-container">
+        <div class="welcome-header">
+            <h1>Welcome Back, Quinn!</h1>
+            <p>Let's keep up the great work today. <span class="sparkle">✨</span></p>
+        </div>
+        
+        <!-- Metric Cards Layout Area -->
+        <div class="dashboard-metrics">
+            <!-- Progress Metric Card -->
+            <div class="metric-card progress-card">
+                <div class="metric-info">
+                    <div class="metric-icon-box">
+                        <!-- Upward Trend Chart Icon (from feather icons)-->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6584" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <div class="metric-text">
+                        <h3>Current Progress</h3>
+                        <p>You have completed 48% of your current<br>curriculum goals this week.</p>
+                    </div>
+                </div>
+                <!-- Progress Component Meter -->
+                <div class="progress-circle-wrapper">
+                    <svg class="progress-circle" width="70" height="70" viewBox="0 0 36 36">
+                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle-fill" stroke-dasharray="48, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="progress-percentage">48%</div>
+                </div>
+            </div>
+
+            <!-- Certificates Card -->
+            <div class="metric-card cert-card">
+                <div class="metric-info">
+                    <div class="metric-icon-box">
+                        <!-- Certificate Icon -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8378f4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="metric-text">
+                        <h3>Certificates Earned</h3>
+                        <p>2 Professional Certifications</p>
+                    </div>
+                </div>
+                <!-- Sparkle Accents Graphic Elements -->
+                <div class="sparkle-accents">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#dcd9fd"><path d="M12 3l1.912 5.886H20.1l-4.994 3.63L17.018 18.4 12 14.77 6.982 18.4l1.912-5.884-4.994-3.63h6.188L12 3z"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dynamic Schedule Container -->
+        <div class="schedule-container">
+            <div class="schedule-title">
+                <!-- Mini Calendar Header Icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8378f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="11" y2="10"></line></svg>
+                Your Active Course Schedule
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Headers Row Components -->
+                <div class="grid-header">Course Name</div>
+                <div class="grid-header">Next Lesson</div>
+                <div class="grid-header">Due Date</div>
+
+                <!-- Row Item 1 -->
+                <div class="grid-cell">
+                    <div class="course-icon-circle css-course">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff6584" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M21 12H3M12 3v18"/></svg>
+                    </div>
+                    Advanced CSS Layouts
+                </div>
+                <div class="grid-cell muted">Grid Template Areas</div>
+                <div class="grid-cell">
+                    <span class="badge tomorrow">Tomorrow</span>
+                </div>
+
+                <!-- Row Item 2 -->
+                <div class="grid-cell">
+                    <div class="course-icon-circle ui-course">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8378f4" stroke-width="2.5"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M12 8V16M8 12H16"/></svg>
+                    </div>
+                    Intro to UI Design
+                </div>
+                <div class="grid-cell muted">Color & Contrast Theory</div>
+                <div class="grid-cell">
+                    <span class="badge friday">Friday</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

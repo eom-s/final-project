@@ -1,0 +1,434 @@
+/* --- Theme Colors --- */
+:root {
+    --bg-main: #fcf9fc;
+    --text-dark: #0f1227;
+    --text-muted: #5e6481;
+    --accent-pink: #ff6584;
+    --accent-purple: #8378f4;
+    --nav-bg: #0b0d19;
+    --border-light: #f2edf4;
+    --card-shadow: 0 10px 30px rgba(131, 120, 244, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Navbar Layout Styles --- */
+.navbar {
+    background-color: var(--nav-bg);
+    padding: 1.25rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 12px;          
+    font-size: 24px;     
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo-icon {
+    width: 32px;       
+    height: auto;     
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.navbar ul li a {
+    color: #a0a5c0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 6px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+/* Active tab state slider */
+.navbar ul li a.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navbar ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-pink);
+    border-radius: 2px;
+}
+
+/* --- Core Structured Layout --- */
+.content-container {
+    padding: 3.5rem 4rem;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.welcome-header h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+}
+
+.welcome-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+.sparkle {
+    display: inline-block;
+    margin-left: 2px;
+}
+
+/* --- Cards Core System Elements --- */
+.dashboard-metrics {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.metric-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--card-shadow);
+}
+
+.metric-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.metric-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-card .metric-icon-box { background-color: #ffeef2; }
+.cert-card .metric-icon-box { background-color: #f0eeff; }
+
+.metric-text h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+}
+
+.metric-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Sparkle icon spacing positioning styling */
+.sparkle-accents {
+    padding-right: 1rem;
+    opacity: 0.85;
+}
+
+/* Graphic Elements Component Configurations */
+.progress-circle-wrapper {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #ffeef2;
+    stroke-width: 3.5;
+}
+
+.circle-fill {
+    fill: none;
+    stroke: var(--accent-pink);
+    stroke-width: 3.5;
+    stroke-linecap: round;
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* --- Advanced Grid Table Custom Schedules --- */
+.schedule-container {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--card-shadow);
+}
+
+.schedule-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 1.2fr;
+    align-items: center;
+}
+
+.grid-header {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-purple);
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-light);
+    text-transform: capitalize;
+}
+
+.grid-cell {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.grid-cell.muted {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.course-icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.css-course { background-color: #ffeef2; }
+.ui-course { background-color: #f0eeff; }
+
+/* Status Labels Components */
+.badge {
+    padding: 0.45rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge.tomorrow {
+    background-color: #ffeef2;
+    color: var(--accent-pink);
+}
+
+.badge.friday {
+    background-color: #f0eeff;
+    color: var(--accent-purple);
+}
+
+/* --- Catalog Grid Layout Component Blocks --- */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(131, 120, 244, 0.08);
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 190px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- Interactive Classroom Dashboard --- */
+.classroom-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.video-placeholder {
+    background-color: #000000;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.75rem;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.video-details h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.video-details p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Syllabus Side Menu Container Options */
+.syllabus-sidebar-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--card-shadow);
+}
+
+.syllabus-sidebar-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
+}
+
+.custom-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.custom-list li {
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.custom-list li:last-child {
+    border-bottom: none;
+}
+
+.custom-list li .icon {
+    font-size: 1rem;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+/* Interactive List Items Control */
+.custom-list li.completed {
+    color: #22c55e;
+}
+.custom-list li.completed:hover {
+    background-color: #f2fcf5;
+}
+
+.custom-list li.active {
+    color: var(--accent-purple);
+    background-color: #f4f3ff;
+}
+
+.custom-list li.locked {
+    color: #94a3b8;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
