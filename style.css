@@ -25,63 +25,52 @@ body {
 }
 
 /* --- Navbar Layout Styles --- */
-.navbar {
-    background-color: var(--nav-bg);
-    padding: 1.25rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center; 
-    gap: 12px;          
-    font-size: 24px;     
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.logo-icon {
-    width: 32px;       
-    height: auto;     
-}
+.navbar { background-color: var(--nav-bg); padding: 1.25rem 4rem; display: flex; justify-content: space-between; align-items: center; } 
+.logo { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: #ffffff; } 
+.logo-icon { width: 32px; height: auto; }
 
 .navbar ul {
     display: flex;
+    align-items: center;
+    gap: 12px;
     list-style: none;
-    gap: 2.5rem;
 }
 
 .navbar ul li a {
-    color: #a0a5c0;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    padding-bottom: 6px;
     position: relative;
-    transition: color 0.2s ease;
+
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    color: #9ea6c7;
+    text-decoration: none;
+
+    font-weight: 600;
+    transition: .25s ease;
 }
 
 .navbar ul li a:hover {
-    color: #ffffff;
+    color: white;
+    background: rgba(255,255,255,.06);
+    transform: translateY(-2px);
 }
 
 /* Active tab state slider */
 .navbar ul li a.active {
-    color: #ffffff;
-    font-weight: 600;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent-pink),
+        var(--accent-purple)
+    );
+
+    box-shadow:
+        0 10px 20px rgba(131,120,244,.3);
 }
 
 .navbar ul li a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--accent-pink);
-    border-radius: 2px;
+    display: none;
 }
 
 /* --- Core Structured Layout --- */
@@ -188,6 +177,17 @@ body {
     stroke: var(--accent-pink);
     stroke-width: 3.5;
     stroke-linecap: round;
+
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+
+    animation: progressAnimation 1.5s ease forwards;
+}
+
+@keyframes progressAnimation {
+    to {
+        stroke-dashoffset: 52; /* 100 - 48 = 52 */
+    }
 }
 
 .progress-percentage {
@@ -468,4 +468,3 @@ body {
 .card.current .image-wrapper {
     margin-top: 1.5rem;
 }
-
